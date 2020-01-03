@@ -5,11 +5,11 @@ function LoadAssets(scene, assetsManager) {
     Bubble_P.parent = Question_P
 
     //ENV TASK
-    var envTask = assetsManager.addCubeTextureTask("envTask", "/assets/environment.dds");
+    var envTask = assetsManager.addCubeTextureTask("envTask", "./assets/environment.dds");
 
     envTask.onSuccess = function (task) {
         //alert('HDR LOADED');
-        hdrTexture = new BABYLON.CubeTexture.CreateFromPrefilteredData("/assets/environment.dds", scene);
+        hdrTexture = new BABYLON.CubeTexture.CreateFromPrefilteredData("./assets/environment.dds", scene);
 
         // Create Skybox
         var hdrSkybox = BABYLON.Mesh.CreateBox("hdrSkyBox", 1000.0, scene);
@@ -30,7 +30,7 @@ function LoadAssets(scene, assetsManager) {
     Rabbit_P = new BABYLON.TransformNode("Rabbit_P")
     Rabbit_P.parent = moveScene_P
 
-    var rabbitTask = assetsManager.addMeshTask("", "", "/assets/hase.glb")
+    var rabbitTask = assetsManager.addMeshTask("", "", "./assets/hase.glb")
 
     rabbitTask.onSuccess = function (task) {
         task.loadedMeshes[0].parent = Rabbit_P
@@ -57,7 +57,7 @@ function LoadAssets(scene, assetsManager) {
         console.log(message, exception);
     }
 
-    var blaseTask = assetsManager.addMeshTask("", "", "/assets/sprechblase.glb")
+    var blaseTask = assetsManager.addMeshTask("", "", "./assets/sprechblase.glb")
     Question_P = new BABYLON.TransformNode("Question_P", scene)
 
     blaseTask.onSuccess = function (task) {
@@ -73,7 +73,7 @@ function LoadAssets(scene, assetsManager) {
         console.log(message, exception);
     }
 
-    var answerTask = assetsManager.addMeshTask("", "", "/assets/answerblase.glb")
+    var answerTask = assetsManager.addMeshTask("", "", "./assets/answerblase.glb")
     Answer_P1 = new BABYLON.TransformNode("Answer_P1", scene)
 
     answerTask.onSuccess = function (task) {
@@ -93,7 +93,7 @@ function LoadAssets(scene, assetsManager) {
     Kuke_P = new BABYLON.TransformNode("Kuke_P")
     Kuke_P.parent = moveScene_P
 
-    var kukeTask = assetsManager.addMeshTask("", "", "/assets/kuke.glb")
+    var kukeTask = assetsManager.addMeshTask("", "", "./assets/kuke.glb")
 
     kukeTask.onSuccess = function (task) {
         task.loadedMeshes[0].parent = Kuke_P
@@ -154,11 +154,11 @@ function Load3Eggs(assetsManager) {
     Eggs_P.parent = moveScene_P
 
     var EggsArray = []
-    eggTask1 = assetsManager.addMeshTask("", "", "/assets/egg.glb")
+    eggTask1 = assetsManager.addMeshTask("", "", "./assets/egg.glb")
     EggsArray.push(eggTask1)
-    eggTask2 = assetsManager.addMeshTask("", "", "/assets/egg.glb")
+    eggTask2 = assetsManager.addMeshTask("", "", "./assets/egg.glb")
     EggsArray.push(eggTask2)
-    eggTask3 = assetsManager.addMeshTask("", "", "/assets/egg.glb")
+    eggTask3 = assetsManager.addMeshTask("", "", "./assets/egg.glb")
     EggsArray.push(eggTask3)
     console.log(EggsArray)
 
