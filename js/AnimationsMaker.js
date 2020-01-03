@@ -113,7 +113,7 @@ function createWinParticles() {
     emitterWin.parent = moveScene_P
 
     winParticlesLeft = new BABYLON.ParticleSystem("rain", 20, scene, null, true);
-    winParticlesLeft.particleTexture = new BABYLON.Texture("/assets/spriteswin.png", scene, true,
+    winParticlesLeft.particleTexture = new BABYLON.Texture("./assets/spriteswin.png", scene, true,
         false, BABYLON.Texture.TRILINEAR_SAMPLINGMODE);
         winParticlesLeft.spriteRandomStartCell = true
         winParticlesLeft.startSpriteCellID = 0;
@@ -147,7 +147,7 @@ function createWinParticles() {
     //winParticles.addVelocityGradient(-0.3,0, 0);
 
     winParticlesRight = new BABYLON.ParticleSystem("rain", 20, scene, null, true);
-    winParticlesRight.particleTexture = new BABYLON.Texture("/assets/spriteswin.png", scene, true,
+    winParticlesRight.particleTexture = new BABYLON.Texture("./assets/spriteswin.png", scene, true,
         false, BABYLON.Texture.TRILINEAR_SAMPLINGMODE);
         winParticlesRight.spriteRandomStartCell = true
         winParticlesRight.startSpriteCellID = 0;
