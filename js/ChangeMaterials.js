@@ -54,7 +54,7 @@ function changeMats() {
     kukeMat.metallic = 0.67
     kukeMat.roughness = 0.25
 
-    var holeText = new BABYLON.Texture("/assets/hole.png", scene, true, false)
+    var holeText = new BABYLON.Texture("./assets/hole.png", scene, true, false)
     holeMat.roughness =0
     holeMat.metallic = 0
     holeMat.albedoTexture = holeText
@@ -67,13 +67,13 @@ function changeMats() {
     eggMats[0].roughness = 0.5
     eggMats[0].backFaceCulling =false
 
-    eggMats[1].albedoTexture = new BABYLON.Texture("/assets/Color.png", scene, true, false)
+    eggMats[1].albedoTexture = new BABYLON.Texture("./assets/Color.png", scene, true, false)
     eggMats[1].reflectionTexture = hdrTexture
     eggMats[1].metallic = 0.75
     eggMats[1].roughness = 0.5
     eggMats[1].backFaceCulling =false
 
-    eggMats[2].albedoTexture = new BABYLON.Texture("/assets/Color3.png", scene, true, false)
+    eggMats[2].albedoTexture = new BABYLON.Texture("./assets/Color3.png", scene, true, false)
     eggMats[2].reflectionTexture = hdrTexture
     eggMats[2].metallic = 0.75
     eggMats[2].roughness = 0.5
